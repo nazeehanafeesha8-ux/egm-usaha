@@ -1,0 +1,56 @@
+:root{
+    --green: #1d4a2c;
+    --red: #c8202b;
+}
+
+/*General Settings*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: system-ui, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px;
+}
+
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #ffffff;
+}
+
+/* Company Logo */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+/* Individual Links */
+.nav-links a{
+    text-decoration: none;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* Hover Effect */
+.nav-links a:hover{
+    color: var(--red);
+}
+
