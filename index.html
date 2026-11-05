@@ -6,29 +6,292 @@
 
     <title> EGM USAHA - YOUR SOLUTION PROVIDER </title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar-->>
+    <!-- Navigation Bar-->
      <header>
         <nav class="navbar">
 
             <div class="logo">
-                EGM USAHA
+                <a href="#home">
+                    <img src="images/logo_egm_usaha.jpeg" alt="EGM Usaha Logo">
+                </a>
             </div>
 
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About Us</a></li>
-                <li><a href="pages/services.html">Our Solutions</a></li>
-                <li><a href="pages/projects.html">Projects</a></li>
-                <li><a href="pages/news.html">News & Updates</a></li>
-                <li><a href="pages/contact.html">Contact Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#business">Our Business</a></li>
+                <li><a href="#coverage">Coverage</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
+
     </header>
+
+    <section class="hero" id="home">
+        <div class="hero-slides">
+            <div class="slide active" style="background-image: url('images/hero-1.jpg');"></div>
+            <div class="slide" style="background-image: url('images/hero-2.jpg');"></div>
+            <div class="slide" style="background-image: url('images/hero-3.jpeg');"></div>
+            <div class="slide" style="background-image: url('images/hero-4.jpg');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>Total Fire & Lifesaving Solutions</h1>
+            <p>For Commercial, Industrial & Oil and Gas</p>
+            <a href="#about" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Us Section-->
+    <section class="about" id="about">
+        <div class="about-container">
+
+            <h1>About Us</h1>
+
+            <p>
+                EGM Usaha is a Borneo-based provider of fire systems, lifesaving equipment and civil works, serving customers across Sarawak, Sabah, Indonesia and Brunei.
+            </p>
+
+            <ul class="industry-list">
+                <li class="industry-item">
+                    <span class="industry-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></span>
+                    <span>Commercial<br>Buildings</span>
+                </li>
+                <li class="industry-item">
+                    <span class="industry-icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></span>
+                    <span>Industrial<br>Facilities</span>
+                </li>
+                <li class="industry-item">
+                    <span class="industry-icon"><i class="fa-solid fa-oil-well" aria-hidden="true"></i></span>
+                    <span>Oil &amp; Gas<br>Platforms</span>
+                </li>
+                <li class="industry-item">
+                    <span class="industry-icon"><i class="fa-solid fa-ship" aria-hidden="true"></i></span>
+                    <span>Marine &amp;<br>Port Facilities</span>
+                </li>
+                <li class="industry-item">
+                    <span class="industry-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+                    <span>Emergency<br>Response</span>
+                </li>
+            </ul>
+
+            <a href="pages/about.html" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!--Business Section-->
+    <section class="business" id="business">
+        <h1>Our Business</h1>
+
+        <div class="business-grid">
+
+            <!--Card 1-->
+            <article class="business-card">
+                <button type="button" class="business-icon bubble-toggle" aria-expanded="false"
+                            aria-controls="list-construction" aria-label="Show Construction &amp; Engineering activities">
+                    <i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>
+                </button>
+
+                <h3>Construction &amp; Engineering</h3>
+                <p>Building, infrastructure and engineering works, from M&amp;E to facility management.</p>
+                <span class="reveal-hint">Hover for list</span>
+
+                <div class="business-reveal" id="list-construction">
+                    <div class="business-reveal-inner">
+                        <ul class="business-tags">
+                            <li>Construction</li>
+                            <li>Infrastructure</li>
+                            <li>Engineering</li>
+                            <li>Mechanical &amp; Electrical (M&amp;E)</li>
+                            <li>Plumbing</li>
+                            <li>Air Conditioning</li>
+                            <li>Renewable Energy</li>
+                            <li>Facility Management</li>
+                        </ul>
+                        <a href="#" class="more-info-btn">More Info</a>
+                    </div>
+                </div>
+            </article>
+
+            <!--Card 2-->
+            <article class="business-card">
+                <button type="button" class="business-icon bubble-toggle" aria-expanded="false"
+                            aria-controls="list-energy" aria-label="Show Energy &amp; Safety System activities">
+                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                </button>
+
+                <h3>Energy &amp; Safety Systems</h3>
+                <p>Power, detection and safety systems with expert technical support.</p>
+                <span class="reveal-hint">Hover for list</span>
+
+                <div class="business-reveal" id="list-energy">
+                    <div class="business-reveal-inner">
+                        <ul class="business-tags">
+                            <li>Energy</li>
+                            <li>Power Generation</li>
+                            <li>Gas Detection</li>
+                            <li>Safety Systems</li>
+                            <li>Instrumentation</li>
+                            <li>Technical Services</li>
+                        </ul>
+                        <a href="#" class="more-info-btn">More Info</a>
+                    </div>
+                </div>
+            </article>
+
+            <!--Card 3-->
+            <article class="business-card">
+                <button type="button" class="business-icon bubble-toggle" aria-expanded="false"
+                            aria-controls="list-logistics" aria-label="Show Logistics, Marine &amp; Trading activities">
+                        <i class="fa-solid fa-ship" aria-hidden="true"></i>
+                </button>
+                
+                <h3>Logistics, Marine &amp; Trading</h3>
+                <p>Moving, supplying and supporting operations on land and offshore.</p>
+                <span class="reveal-hint">Hover for list</span>
+
+                <div class="business-reveal" id="list-logistics">
+                    <div class="business-reveal-inner">
+                        <ul class="business-tags">
+                            <li>Transportation</li>
+                            <li>Logistics</li>
+                            <li>Offshore</li>
+                            <li>Marine</li>
+                            <li>Equipment</li>
+                            <li>Rental</li>
+                            <li>Industrial Supply</li>
+                            <li>General Trading</li>
+                            <li>Support Services</li>
+                        </ul>
+                        <a href="#" class="more-info-btn">More Info</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!--Coverage Section-->
+    <section class="coverage" id="coverage">
+        <div class="coverage-container">
+
+            <h1>Our Coverage</h1>
+
+            <h2>We Serve Across the Region</h2>
+            <p class="coverage-intro">
+                From our based in Miri, Sarawak, we support clients across Malaysia, Brunei and Indonesia.
+            </p>
+
+            <div id="coverage-map" class="coverage-map"></div>
+
+            <ul class="coverage-list">
+                <li class="coverage-item">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Sarawak</h3>
+                    <p>Headquaters, Miri</p>
+                </li>
+                <li class="coverage-item">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Sabah</h3>
+                    <p>East Malaysia</p>
+                </li>
+                <li class="coverage-item">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Brunei</h3>
+                    <p>Cross-border support</p>
+                </li>
+                <li class="coverage-item">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Indonesia</h3>
+                    <p>Cross-border support</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--Contact Us section-->
+    <section class="contact" id="contact">
+        <div class="contact-wrap">
+
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+
+                <p><strong>Nigel Goh</strong>Business Development Executive</p>
+                <p><strong>Email</strong><a href="mailto: nigelgkt@egmusaha.com">nigelgkt@egmusaha.com</a></p>
+                <p><strong>Phone</strong><a href="tel: +60172179899">+60 17-217 9899</a></p>
+                <p><strong>Address</strong>Lot 2911, Boulevard Commercial Centre,<br>Miri, Sarawak, Malaysia</p>
+            </div>
+
+            <form class="contact-form">
+                <label>Name
+                    <input type="text" name="name" required>
+                </label>
+                <label>Company
+                    <input type="text" name="company">
+                </label>
+                <label>Phone
+                    <input type="tel" name="phone">
+                </label>
+                <label>Email
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label>How can we help?
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+                <button type="submit" class="btn">Send enquiry</button>
+                <p class="form-note">This opens your email app with the enquiry ready to send.</p>
+            </form>
+        </div> 
+    </section>
+
+    
+    <footer class="footer">
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    <img src="images/logo_egm_usaha.jpeg" alt="EGM Usaha">
+                </a>
+                <address class="footer-details">
+                    <strong>EGM Usaha [Sdn. Bhd.] [Registration No: xxxxxx]</strong><br>
+                    Lot 2911, Boulevard Commercial Centre,<br>
+                    98000 Miri, Sarawak, Malaysia</br>
+                    Tel: <a href="tel: +60172179899">+60 17-217 9899</a><br>
+                    Email: <a href="mailto:nigelgkt@egmusaha.com">nigelgkt@egmusaha.com</a>
+                </address>
+            </div>
+
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#business">Our Business</a></li>
+                    <li><a href="#coverage">Coverage</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+
+                <p class="footer-social-title">Stay connected with us:</p>
+                <div class="footer-social">
+                    <a href="#" arial-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" arial-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 EGM Usaha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
