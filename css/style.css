@@ -135,14 +135,14 @@ header{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
     position: relative;
     overflow: hidden;
 }
 
 .hero h1{
-    font-family: 'Arial Narrow',sans-serif;
-    font-weight: 600;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
     font-size: 55px;
     line-height: 1.1;
     margin-bottom: 12px;
@@ -229,11 +229,12 @@ header{
 
 /*Business*/
 .business{
-    padding: 50px 50px;
-    font-family: 'Times New Roman', Times, serif;
+    padding: 80px 60px;
+    font-family: 'Arial Narrow', serif;
     text-align: center;
     font-size: 23px;
     color: var(--green);
+    
 }
 
 .business-grid{
@@ -252,12 +253,12 @@ header{
     position: relative;
     background-color: #ffffff;
     border-radius: 12px;
-    border-top: 5px solid var(--red);
-    padding: 36px 28px;
+    padding: 0 24px 32px;
     text-align: center;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     transition:transform 0.3s, box-shadow 0.3s;
     min-height: 300px;
+    overflow: hidden;
 }
 
 .business-card:hover{
@@ -309,7 +310,9 @@ header{
     color: var(--green);
     font-size: 36px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    position: relative;
+    top: -20px;
 }
 
 .about h2,
@@ -321,6 +324,9 @@ header{
 
 .business-icon{
     transition: transform 0.3s;
+    position: relative;
+    margin: -36px auto 16px;
+    border: 4px solid #ffffff;
 }
 
 .business-card:hover .business-icon{
@@ -419,6 +425,19 @@ header{
     color: #222222;
 }
 
+.business-img{
+    display: block;
+    width: calc(100% + 48px);
+    height: 180px;
+    margin: 0 -24px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.business-card:hover .business-img{
+    transform: scale(1.05);
+}
+
 .more-info-btn{
     display: inline-block;
     padding: 8px 20px;
@@ -446,7 +465,7 @@ header{
     padding: 80px 60px;
     text-align: center;
     color: var(--green);
-    font-family: "Times New Roman", Times, Serif;
+    font-family: 'Arial Narrow', serif;
     font-size: 25px;
 }
 
@@ -579,7 +598,7 @@ header{
 .about h1, .about h2{
     color: var(--green);
     font-size: 45px;
-    font-family: "TImes New Roman", Times, serif;
+    font-family: 'Arial Narrow', serif;
     margin-bottom: 20px;
 }
 
