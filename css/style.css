@@ -915,6 +915,9 @@ textarea:focus{
     .coverage-map .map-label{
         font-size: 12px;
     }
+    .coverage-map .leaflet-tile-pane{
+        filter: none;
+    }
 }
 
 
