@@ -3,6 +3,11 @@
     --red: #c8202b;
 }
 
+img{
+    min-height: 100%;
+    height: auto;
+}
+
 @view-transition{
     navigation: auto;
 }
@@ -257,7 +262,7 @@ header{
     text-align: center;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     transition:transform 0.3s, box-shadow 0.3s;
-    min-height: 300px;
+    min-height: 0;
     overflow: hidden;
 }
 
@@ -313,6 +318,16 @@ header{
     margin-bottom: 10px;
     position: relative;
     top: -20px;
+}
+
+.business p{
+    color:#555555;
+    font-family: system-ui, Arial, sans-serif;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    max-width: 650px;
 }
 
 .about h2,
@@ -390,7 +405,7 @@ header{
 }
 
 .reveal-hint{
-    display: inline-block;
+    display: none;
     padding: 4px 14px;
     border-radius: 999px;
     background-color: #f4f6f3;
@@ -402,8 +417,8 @@ header{
 
 .business-reveal{
     display: grid;
-    grid-template-rows: 0fr;
-    opacity: 0;
+    grid-template-rows: 1cqh;
+    opacity: 1;
     transition: grid-template-rows 0.4s ease, opacity 0.3s ease;
 }
 
@@ -439,7 +454,10 @@ header{
 }
 
 .more-info-btn{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: inherit;
     padding: 8px 20px;
     margin-bottom: 4px;
     border-radius: 999px;
@@ -447,16 +465,23 @@ header{
     color: var(--green);
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
     margin-top: 16px;
     font-size: 14px;
-    padding: 8px 22px;
+    transition: color 0.3s;
+}
+
+more-info-btn i{
+    transition: transform 0.3s;
 }
 
 .more-info-btn:hover{
     background-color: var(--green);
     color: #ffffff;
     font-family: inherit;
+}
+
+.more-info-btn:hover i{
+    transform: translateX(5px);
 }
 
 /*Coverage Section*/
