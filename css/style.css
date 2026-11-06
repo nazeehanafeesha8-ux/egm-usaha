@@ -56,7 +56,7 @@ html{
 
 
 body{
-    font-family: system-ui, Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     line-height: 1.6;
     background-color: #f5f5f5;
     color: #222;
@@ -235,7 +235,7 @@ header{
 /*Business*/
 .business{
     padding: 80px 60px;
-    font-family: 'Arial Narrow', serif;
+    font-family: 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     font-size: 23px;
     color: var(--green);
