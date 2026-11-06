@@ -504,7 +504,7 @@ more-info-btn i{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 16px;
-    font-family: 'Arial Narrow', serif;
+    font-family: 'Arial Narrow', Arial, sans-serif;
 }
 
 .coverage-intro{
@@ -622,7 +622,7 @@ more-info-btn i{
 .about h1, .about h2{
     color: var(--green);
     font-size: 45px;
-    font-family: 'Arial Narrow', serif;
+    font-family: 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 20px;
 }
 
