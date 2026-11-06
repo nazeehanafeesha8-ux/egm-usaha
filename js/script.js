@@ -80,6 +80,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     map.fitBounds(points,{ padding: [40, 40]});
 }
 
+window.addEventListener('load', function(){
+    map.invalidateSize();
+    map.fitBounds(points, { padding: [40, 40] });
+});
+
+window.addEventListener('resize', function (){
+    map.invalidateSize();
+});
+
 
 var sections = document.querySelectorAll('section[id]');
 var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');

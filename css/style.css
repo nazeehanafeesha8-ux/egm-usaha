@@ -3,11 +3,6 @@
     --red: #c8202b;
 }
 
-img{
-    min-height: 100%;
-    height: auto;
-}
-
 @view-transition{
     navigation: auto;
 }
@@ -140,7 +135,7 @@ header{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -912,6 +907,13 @@ textarea:focus{
 
     body{
         animation: none;
+    }
+    .coverage-map .map-pin i{
+        font-size: 30px;
+    }
+
+    .coverage-map .map-label{
+        font-size: 12px;
     }
 }
 
