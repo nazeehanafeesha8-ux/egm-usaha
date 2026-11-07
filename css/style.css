@@ -499,7 +499,7 @@ more-info-btn i{
     padding: 80px 60px;
     text-align: center;
     color: var(--green);
-    font-family: 'Arial Narrow', serif;
+    font-family: 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
 }
 
