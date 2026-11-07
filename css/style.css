@@ -918,7 +918,7 @@ textarea:focus{
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         padding: 8px 0;
     }
-    .navbar .nav-open .nav-links{
+    .navbar.nav-open .nav-links{
         display: flex;
     }
     .navlinks a{
