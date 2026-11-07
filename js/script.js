@@ -167,7 +167,7 @@ function setMenu(isOpen){
 
 if(menuToggle && navbar){
     menuToggle.addEventListener('click', function(){
-        setMenu(!navbar.classList.contains(nav-open));
+        setMenu(!navbar.classList.contains('nav-open'));
     });
 
     document.querySelectorAll('.nav-links a').forEach(function (link){
