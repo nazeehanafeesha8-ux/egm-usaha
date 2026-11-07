@@ -895,6 +895,7 @@ textarea:focus{
     max-height: 56px;
     width: auto;
 }
+
 @media(max-width: 800px){
     .navbar{ 
         flex-direction: row;

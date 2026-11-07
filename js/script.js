@@ -154,24 +154,24 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-/*Mobile menu*/
+/* Mobile menu */
 var menuToggle = document.querySelector('.menu-toggle');
 var navbar = document.querySelector('.navbar');
 
-function setMenu(isOpen){
-    navbar.classList.toggle('navbar-open', isOpen);
+function setMenu(isOpen) {
+    navbar.classList.toggle('nav-open', isOpen);
     menuToggle.setAttribute('aria-expanded', isOpen);
     menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     menuToggle.querySelector('i').className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
 }
 
-if(menuToggle && navbar){
-    menuToggle.addEventListener('click', function(){
+if (menuToggle && navbar) {
+    menuToggle.addEventListener('click', function () {
         setMenu(!navbar.classList.contains('nav-open'));
     });
 
-    document.querySelectorAll('.nav-links a').forEach(function (link){
-        link.addEventListener('click', function(){
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
             setMenu(false);
         });
     });
