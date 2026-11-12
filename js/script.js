@@ -16,15 +16,43 @@ var contactForm = document.getElementById('contact-form');
 if(contactForm){
     contactForm.addEventListener('submit', function(e){
         e.preventDefault();
-        var d = new FormData(e.target);
-        var body = 'Name: ' + d.get('name') +
-            '\nCompany: ' + d.get('company') +
-            '\nPhone: ' + d.get('phone') + 
-            '\nEmail: ' + d.get('email') +
-            '\n\n' + d.get('message');
-    window.location.href = 'mailto:nigelgkt@egmusaha.com?subject=' + 
-        encodeURIComponent('Website enquiry from ' + d.get('name')) +
-        '&body=' + encodeURIComponent(body);
+
+        /* Sends the form to Web3Forms, which emails it to the inbox linked to the access key in index.html */
+        var form = e.target;
+        var data = new FormData(form);
+        var button = form.querySelector('button[type="submit"]');
+        var status = document.getElementById('form-status');
+
+        data.append('subject', 'Website enquiry from ' + data.get('name'));
+
+        button.disabled = true;
+        button.textContent = 'Sending...';
+        status.style.color = '';
+        status.textContent = 'Sending your enquiry...';
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: data
+        })
+            .then(function (response) { return response.json(); })
+            .then(function (result) {
+                if (result.success) {
+                    status.style.color = 'var(--green)';
+                    status.textContent = "Thank you! Your enquiry has been sent. We'll be in touch soon.";
+                    form.reset();
+                } else {
+                    throw new Error(result.message);
+                }
+            })
+            .catch(function () {
+                status.style.color = 'var(--red)';
+                status.textContent = 'Sorry, something went wrong. Please email nigelgkt@egmusaha.com or call +60 17-217 9899.';
+            })
+            .finally(function () {
+                button.disabled = false;
+                button.textContent = 'Send enquiry';
+            });
     });
 }
 
@@ -113,7 +141,7 @@ var siteHeader = document.querySelector('header');
 
 window.addEventListener('scroll', function(){
     if(window.scrollY > 10){
-        siteHeader.classList.add(scrolled);
+        siteHeader.classList.add('scrolled');
     }else{
         siteHeader.classList.remove('scrolled');
     }

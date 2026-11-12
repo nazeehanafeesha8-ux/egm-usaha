@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title> EGM USAHA - YOUR SOLUTION PROVIDER </title>
+    <meta name="description" content="EGM Usaha is a Miri-based provider of fire systems, lifesaving equipment, construction, energy and marine services across Sarawak, Sabah, Brunei and Indonesia.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -246,12 +247,17 @@
                 <h2>Get In Touch</h2>
 
                 <p><strong>Nigel Goh</strong>Business Development Executive</p>
-                <p><strong>Email</strong><a href="mailto: nigelgkt@egmusaha.com">nigelgkt@egmusaha.com</a></p>
+                <p><strong>Email</strong><a href="mailto:nigelgkt@egmusaha.com">nigelgkt@egmusaha.com</a></p>
                 <p><strong>Phone</strong><a href="tel: +60172179899">+60 17-217 9899</a></p>
                 <p><strong>Address</strong>Lot 2911, Boulevard Commercial Centre,<br>Miri, Sarawak, Malaysia</p>
             </div>
 
-            <form class="contact-form">
+            <form id="contact-form" class="contact-form">
+                <!-- Web3Forms: sends the enquiry straight to the inbox linked to this key -->
+                <input type="hidden" name="access_key" value="753b02e1-7262-4372-90e9-c2cdabe67d3a">
+                <input type="hidden" name="from_name" value="EGM Usaha Website">
+                <!-- Spam trap: real visitors never see or tick this -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
                 <label>Name
                     <input type="text" name="name" required>
                 </label>
@@ -268,7 +274,7 @@
                     <textarea name="message" rows="5" required></textarea>
                 </label>
                 <button type="submit" class="btn">Send enquiry</button>
-                <p class="form-note">This opens your email app with the enquiry ready to send.</p>
+                <p class="form-note" id="form-status" aria-live="polite">We'll reply to the email address you provide.</p>
             </form>
         </div> 
     </section>
@@ -312,7 +318,7 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/script.js?v=3"></script>
+    <script src="js/script.js?v=10"></script>
 
 </body>
 
