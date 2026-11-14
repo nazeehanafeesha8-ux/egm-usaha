@@ -70,7 +70,7 @@ var map = L.map('coverage-map', {
 });
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMao contributors'
+    attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
     var places = [

@@ -8,9 +8,9 @@
  ## Structure
  -index.html: one-page homepage(hero, about, our business, coverage, contact, footer)
  -pages/about.html, construction.html, safety-system.html, marine.html: inner pages
- -css/style.css: the single stylesheet shared by enery page
- -js/script.js: mobile menu, business card toggles, enquiry form(opens email app)
- -iamges/: logo and photos
+ -css/style.css: the single stylesheet shared by every page
+ -js/script.js: hero slideshow, contact form (sends via Web3Forms), Leaflet coverage map, active nav link, header shadow, business card toggles, mobile menu
+ -images/: logo and photos
 
  ## Conventions
  -Pages inside pages/ use ../ paths (e.g. ../css/style.css, ../images/...)
